@@ -1,0 +1,67 @@
+<div>
+  <table>
+    <thead ng-if="headerSimple" class="header-simple">
+      <tr>
+        <th class="space">&nbsp;</th>
+        <th class="text-center"><i class="glyphicon glyphicon-calendar white-text"></i></th>
+        <th><a href="javascript:;" class="btn btn-link btn-sm pull-left control prev" ng-click="move(-1)"><i class="glyphicon glyphicon-chevron-left"></i></a></th>
+        <th colspan="4" class="text-center"><strong>{{title}}</strong></th>
+        <th><a href="javascript:;" class="btn btn-link btn-sm pull-right control next" ng-click="move(1)"><i class="glyphicon glyphicon-chevron-right"></i></a></th>
+        <th class="space">&nbsp;</th>
+      </tr>
+    </thead>
+    <thead ng-if="headerCustom" class="header-custom">
+      <tr>
+        <th class="space">&nbsp;</th>
+        <th class="text-center arrow">
+          <a href="javascript:;" ng-click="move(-1)"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        </th>
+        <th class="white-text text-center uppercase month-name" colspan="5">{{month}}</th>
+        <th class="text-center arrow">
+          <a href="javascript:;" ng-click="move(1)"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </th>
+        <th class="space">&nbsp;</th>
+      </tr>
+      <tr>
+        <th class="space">&nbsp;</th>
+        <th class="white-text text-center" colspan="7">{{year}}</th>
+        <th class="space">&nbsp;</th>
+      </tr>
+      <tr>
+        <th class="space">&nbsp;</th>
+        <th class="text-center" colspan="7">
+          <a href="javascript:;" class="btn white-text" style="" ng-click="buttonClick()">{{buttonText}}</a>
+        </th>
+        <th class="space">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-show="labels.length > 0" class="h6">
+        <th class="space">&nbsp;</th>
+        <th ng-repeat="label in labels" class="text-center">{{label}}</th>
+        <th class="space">&nbsp;</th>
+      </tr>
+      <tr ng-repeat="row in rows">
+        <td class="space">&nbsp;</td>
+        <td ng-repeat="dt in row" class="text-center"
+          popover="{{dt.popover.text}}" popover-trigger="mouseenter"
+          popover-offset-top="-10"
+        >
+          <a href="javascript:;" type="button" class="btn btn-link btn-sm"
+             ng-class="dt.classes" ng-click="select(dt.date)" ng-disabled="dt.disabled"
+          >
+            <span ng-class="{'text-muted': dt.secondary}">{{dt.label}}</span>
+          </a>
+          <span class="marks"><span
+              ng-if="dt.popover && dt.popover.report" class="fg-report">•</span><span
+              ng-if="dt.popover && dt.popover.appointment" class="fg-appointment">•</span><span
+              ng-if="dt.popover && dt.popover.analysis" class="fg-analysis">•</span><span
+              ng-if="dt.popover && dt.popover.procedure" class="fg-procedure">•</span><span
+              ng-if="!dt.popover || (!dt.popover.report && !dt.popover.appointment && !dt.popover.analysis && !dt.popover.procedure)"
+            >&nbsp;</span></span>
+        </td>
+        <td class="space">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

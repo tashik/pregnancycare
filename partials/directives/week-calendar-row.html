@@ -1,0 +1,5 @@
+<tr>
+  <td class="time" ng-if="halfHour">&nbsp;</td>
+  <td class="time" ng-if="wholeHour">{{hours}}:00</td>
+  <td ng-repeat="day in weekDays"><span class="text-muted">{{day}}</span></td>
+</tr>

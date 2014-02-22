@@ -1,0 +1,9 @@
+<div class="modal-header">
+  <button class="close" type="button" ng-click="cancel()">×</button>
+  <h4 class="uppercase">{{title}}</h4>
+</div>
+<div class="modal-body" ng-transclude></div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="save()">Сохранить</button>
+  <button class="btn btn-warning" ng-click="cancel()">Отменить</button>
+</div>

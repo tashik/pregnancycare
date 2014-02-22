@@ -1,0 +1,196 @@
+<div class="row">
+  <div class="col col-md-12">
+    <div class="padding-30 padding-left-10 patients-page-title">Пациенты</div>
+
+    <div class="row patients-buttons-row">
+      <div class="btn-group col-md-6" data-toggle="buttons">
+        <label class="btn btn-default active"
+               ng-click="predicate = ['lastName','firstName', 'middleName']; reverse=false">
+          <input type="radio"> А-Я
+        </label>
+        <label class="btn btn-default" ng-click="predicate = 'termOfPregnancy'; reverse=false">
+          <input type="radio"> Неделя берем-ти
+        </label>
+        <label class="btn btn-default" ng-click="predicate = 'lastVisit'; reverse=false">
+          <input type="radio"> Дата посещения
+        </label>
+
+      </div>
+      <div class="btn-group col-md-6">
+        <button type="button" class="btn show-patient-dialog-button" data-toggle="modal" data-target="#myModal">ДОБАВИТЬ
+          ПАЦИЕНТА
+        </button>
+      </div>
+    </div>
+
+    <div class="row sidebar patient-row " ng-repeat="patient in patients | orderBy:predicate:reverse">
+      <div class="col-md-1 text-align-center">
+        <img src="" ng-src="{{patient.avatar}}" alt="avatar"/>
+      </div>
+      <div class="col-md-11">
+        <div class="name dashboard-row-title black-text">
+          {{patient.lastName}} {{patient.firstName}} {{patient.middleName}}
+        </div>
+        <div ng-pluralize count="patient.age" when="{'one': '{} год', 'few': '{} года', 'many': '{} лет'}"></div>
+        <div class="row patients-row">
+          <div class="col-md-4">
+            <div class="patient-info patient-row-margin">
+              <div class="{{child}} pull-left " ng-switch on="child"
+                   ng-repeat="child in patient.children track by $index">
+                <span ng-switch-when="male">М</span>
+                <span ng-switch-when="female">Ж</span>
+              </div>
+              <b>{{patient.termOfPregnancy}} неделя</b>
+            </div>
+          </div>
+          <div class="col-md-4">
+
+            <div class="row">
+              <div class="col-md-6 last-visit-title-column patients-title-column">
+                <span>Послед. посещ:</span>
+              </div>
+              <div class="col-md-6 last-visit-value-column patients-value-column">
+                <span><b>{{patient.lastVisit | date:'dd MMMM yyyy'}} г.</b></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 last-visit-title-column patients-title-column">
+                <span>Обслуживание:</span>
+              </div>
+              <div class="col-md-6 last-visit-value-column patients-value-column">
+                <span><b>{{patient.tariff}}</b></span>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-4 patients-title-column">
+                <span>Сообщения:</span>
+              </div>
+              <div class="col-md-5 patients-value-column">
+                <span
+                  ng-class="patient.messages ? 'red-text' : ' ' ">{{patient.messages ? patient.messages : '-'}}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-4 patients-title-column">
+                <span>Пропуски:</span>
+              </div>
+              <div class="col-md-5 patients-value-column">
+                <span ng-class="patient.skips ? 'red-text' : ' ' ">{{patient.skips ? patient.skips : '-'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="patients-border"></div>
+
+  </div>
+
+
+</div>
+
+<div class="modal fade add-patient-dialog" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header add-patient-dialog-title">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title " id="myModalLabel">НОВЫЙ ПАЦИЕНТ</h4>
+      </div>
+      <div class="modal-body">
+
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="lastName" class="col-sm-2 control-label">Фамилия</label>
+
+            <div class="col-sm-10 padding-left-0">
+              <input type="text" class="form-control" id="lastName">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="firstName" class="col-sm-2 control-label">Имя</label>
+
+            <div class="col-sm-10 padding-left-0">
+              <input type="text" class="form-control" id="firstName">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="middleName" class="col-sm-2 control-label">Отчество</label>
+
+            <div class="col-sm-10 padding-left-0">
+              <input type="text" class="form-control" id="middleName">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="event-add-info" class="col-sm-2 control-label padding-left-0">Тип дог-ра</label>
+
+            <div class="col-sm-10 padding-left-0">
+              <select class="form-control" name="info" id="event-add-info" ng-model="defaultTariff"
+                      ng-disabled="0 == tariffList.length" ng-options="a.name for a in tariffList">
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contractNumber" class="col-sm-2 control-label">№ дог-ра</label>
+
+            <div class="col-sm-10 padding-left-0">
+              <input type="text" class="form-control" id="contractNumber">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="login" class="col-sm-2 control-label">Логин</label>
+
+            <div class="col-sm-4 padding-left-0">
+              <input type="text" class="form-control" id="login">
+            </div>
+
+            <label for="password" class="col-sm-2 control-label">Пароль</label>
+
+            <div class="col-sm-4 padding-left-0">
+              <input type="text" class="form-control" id="password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="event-add-date" class="col-sm-8 control-label">Дата последней менструации</label>
+
+            <div class="col-sm-4 padding-left-0">
+              <div class="input-group iconic">
+                <input type="text" name="date" class="form-control" id="event-add-date" value="{{event.date | date: 'dd.MM.yyyy'}}"/>
+                <a href="javascript:;" class="btn btn-default picker" dropdown-picker="appointment-date-picker"><span
+                  class="glyphicon glyphicon-calendar"></span></a>
+
+                <div class="dropdown picker" id="appointment-date-picker">
+                  <my-datepicker class="dropdown-menu date-picker" ng-model="event.date"></my-datepicker>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn save-patient-button">СОХРАНИТЬ</button>
+        <button type="button" class="btn close-add-patient-dialog" data-dismiss="modal">ОТМЕНИТЬ</button>
+      </div>
+
+    </div>
+  </div>
+</div>

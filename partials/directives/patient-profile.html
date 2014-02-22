@@ -1,0 +1,47 @@
+<div class="breadcrumbs">
+  <a href="#/patients">Пациенты</a>
+  — <span>Профиль пациента</span>
+</div>
+<div class="patient-info">
+  <img src="" ng-src="{{patient.avatar}}" alt="" width="90" height="90" class="pull-left img-circle" />
+  <div class="pull-left">
+    <div class="name">
+      {{patient.lastName}}
+      <br/><span>{{patient.firstName}} {{patient.middleName}}</span>
+    </div>
+    <div class="age" ng-pluralize count="patient.age" when="{'one': '{} год', 'few': '{} года', 'many': '{} лет'}"></div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="pregnancy-term border-top padding-left padding-space small">
+    <div class="sex pull-left" ng-switch on="patient.sex">
+      <span ng-switch-when="male">М</span>
+      <span ng-switch-when="female">Ж</span>
+    </div>
+    {{patient.termOfPregnancy}} неделя
+  </div>
+  <div class="border-top padding-left padding-space small">
+    <span>Послед. посещ:</span> <b>{{patient.lastVisit}}</b><br />
+    <span>Обслуживание:</span> <b>{{patient.tariff}}</b>
+  </div>
+  <div class="space-before padding-left bg-gray small padding-header border-bottom">
+    <strong>Уведомления (<span class="text-danger">{{patient.notificationsCount}}</span>)</strong>
+  </div>
+  <div class="notifications">
+    <div class="notification border-bottom padding-left padding-space" ng-repeat="notification in patient.notifications">
+      <div class="info" ng-class="notification.overdue?'pull-left':''" ng-switch on="notification.overdue">
+        <div ng-switch-when="true">
+          {{notification.title|lowercase|ucfirst}} за {{notification.eventDate}}
+          просрочен
+          на <span class="text-danger" ng-pluralize count="notification.overdueDays" when="{'one': '{}&nbsp;день', 'few': '{}&nbsp;дня', 'many': '{}&nbsp;дней'}"></span>
+        </div>
+        <div ng-switch-default>
+          <span class="small text-muted">{{notification.date}}</span><br />
+          Добавлен <a href="#">{{notification.title|lowercase}}</a> за {{notification.eventDate}}
+        </div>
+      </div>
+      <div class="notify pull-right" ng-if="notification.overdue">
+        <a class="btn btn-info white-text" href="javascript:"><span class="glyphicon glyphicon-bell"></span></a>
+      </div>
+    </div>
+  </div>
+</div>

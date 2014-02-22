@@ -1,0 +1,39 @@
+<div class="row event-log">
+  <div class="col log-entry col-md-12">
+    <div class="row week" ng-repeat="week in weeks" ng-show="week.filtered">
+      <div class="col col-md-2">
+        <div class="number text-muted pull-left"><strong>{{week.number}}</strong><br/>неделя</div>
+      </div>
+      <div class="col col-md-10 events">
+        <div class="event active" ng-repeat="event in week.events" ng-show="event.filtered">
+          <span class="arrow"></span><span class="mark {{event.type}}" ng-class="event.performed?'':'not-performed'"></span>
+          <div class="actions" ng-if="actions">
+            <a href="javascript:" class="glyphicon glyphicon-pencil"></a>
+            <a href="javascript:" class="glyphicon glyphicon-trash"></a>
+          </div>
+          <div class="row">
+            <div class="col col-md-8">
+              <span class="name">{{event.name}} {{typeFiltered(event.type)}}</span>
+              <br /><span class="date">{{event.date}}</span>
+            </div>
+            <div class="col col-md-4">
+              <span class="label label-info pull-right" ng-hide="{{event.viewed}}">Не просмотрен</span>
+              <span class="label label-warning pull-right" ng-show="{{event.alerts.file}}">Новый файл</span>
+            </div>
+          </div>
+          <div class="row attached" ng-if="event.files || event.events || event.comments">
+            <div class="col col-md-4">
+              <span ng-if="event.files" ng-pluralize count="event.files" when="{'one': '{} файл', 'few': '{} файла', 'many': '{} файлов'}"></span>
+            </div>
+            <div class="col col-md-4 text-center">
+              <span ng-if="event.events" ng-pluralize count="event.events" when="{'one': '{} событие', 'few': '{} события', 'many': '{} событий'}"></span>
+            </div>
+            <div class="col col-md-4 text-right">
+              <span ng-if="event.comments" ng-pluralize count="event.comments" when="{'one': '{} комментарий', 'few': '{} комментария', 'many': '{} комментариев'}"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

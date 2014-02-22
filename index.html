@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" ng-app="iPregnant">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <!-- build:css css/application.css -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css"/>
+  <!-- endbuild -->
+</head>
+<body>
+  <nav class="navbar screen-header" ng-controller="MenuCtr">
+    <div class="container">
+      <ul class="nav navbar-nav main-menu">
+        <li><a class="uppercase" href="#/dashboard">Главная</a></li>
+        <li><a class="uppercase" href="#/patients">Пациенты <span ng-hide="0 == news.patients" class="badge" ng-bind="news.patients"></span></a></li>
+        <li><a class="uppercase" href="#/calendar">Календарь <span ng-hide="0 == news.calendar" class="badge" ng-bind="news.calendar"></span></a></li>
+        <li><a class="uppercase" href="#/chat">Чат <span ng-hide="0 == news.chat" class="badge" ng-bind="news.chat"></span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#" class="profile dropdown-toggle" data-toggle="dropdown">
+            <div class="clearfix">
+              <div class="pull-left name">
+                <span class="uppercase">БАБКИН</span><br />Пётр<br />Семёнович
+              </div>
+              <div class="pull-right">
+                <img src="/images/empty-user.png" alt="" />
+                <b class="caret"></b>
+              </div>
+            </div>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#/event-log">Журнал событий</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="screen-content container" ng-view></div>
+
+  <!-- build:js js/application.js-->
+  <script src="lib/jquery.js"></script>
+  <script src="lib/bootstrap.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular/i18n/angular-locale_ru-ru.js"></script>
+  <script src="lib/misc/date-ru-RU.js"></script>
+  <script src="lib/angular/ui-bootstrap.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/overrides.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services/api.js"></script>
+  <script src="js/services/event-modal.js"></script>
+  <script src="js/services/uuid.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/directives/datepicker.js"></script>
+  <script src="js/controllers/incomplete.js"></script>
+  <script src="js/controllers/dashboard.js"></script>
+  <script src="js/controllers/menu.js"></script>
+  <script src="js/controllers/patient.js"></script>
+  <script src="js/controllers/patient-profile.js"></script>
+  <script src="js/controllers/calendar.js"></script>
+  <script src="js/controllers/chat.js"></script>
+  <script src="js/controllers/event-log.js"></script>
+  <script src="js/controllers/event-add.js"></script>
+  <script src="js/controllers/medical-record.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

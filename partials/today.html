@@ -1,0 +1,68 @@
+<div id="wrap">
+  <div class="screen-header">
+    <div class="well well-sm">
+      <p class="h4">Сегодня, {{date_now_human}}<br/>{{num_preg_day}}, {{num_preg_week}}</p>
+      <div class="notif">
+        <button type="button" class="btn notif-btn"></button>
+        <span class="badge notif-badge">{{num_kicks}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="screen-content">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">До родов осталось: {{days_before_delivery}}</h3>
+      </div>
+      <div class="panel-body">
+        <h4>Cовет дня</h4>
+        <h5>Заголовок совета дня</h5>
+        <p>Если за прошедшие 12 недель вы прибавили от 1,8 до 3,6 кг, то это вполне нормально. За эти 12 недель ваш вес
+        мог не измениться, а мог и увеличиться...</p>
+      </div>
+    </div>
+    <div class="panel panel-default list-group-panel">
+      <div class="panel-heading">
+        <h3 class="panel-title uppercase">План на сегодня</h3>
+      </div>
+      <div class="panel-body">
+        <ul  class="list-group">
+          <li class="list-group-item"><div>Плановый осмотр у врача</div></li>
+          <li class="list-group-item"><div>Первое плановое УЗИ</div></li>
+          <li class="list-group-item"><div>Написать отчет</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="well well-sm">
+    <ul class="nav nav-pills">
+    <li><span class="footer-btn margright5">
+      <button type="button" class="btn notif-btn"></button>
+      <span class="badge notif-badge">{{num_kicks}}</span>
+    </span>
+    </li>
+
+    <li>
+      <span class="footer-btn">
+        <button type="button" class="btn notif-btn"></button>
+      </span>
+    </li>
+    <li>
+      <span class="footer-btn">
+        <button type="button" class="btn notif-btn"></button>
+      </span>
+    </li>
+    <li>
+      <span class="footer-btn">
+        <button type="button" class="btn notif-btn"></button>
+      </span>
+    </li>
+    <li>
+      <span class="footer-btn margright0">
+        <button type="button" class="btn notif-btn"></button>
+      </span>
+    </li>
+    </ul>
+  </div>
+</div>

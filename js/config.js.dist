@@ -1,0 +1,3 @@
+var CONFIG = {
+  apiURL: 'http://api.local'
+};

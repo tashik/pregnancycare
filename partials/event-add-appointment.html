@@ -1,0 +1,54 @@
+<form class="form-horizontal" name="eventForm">
+  <div class="modal-header">
+    <button class="close" type="button" ng-click="cancel(eventForm)">×</button>
+    <h4 class="uppercase">НОВЫЙ ПРИЕМ</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="event-add-date" class="col-sm-3 control-label">Дата</label>
+      <div class="col-sm-5">
+        <div class="input-group iconic">
+          <input type="text" name="date" class="form-control" id="event-add-date" value="{{event.date | date: 'dd.MM.yyyy'}}" />
+          <a href="javascript:;" class="btn btn-default picker" dropdown-picker="appointment-date-picker"><span class="glyphicon glyphicon-calendar"></span></a>
+          <div class="dropdown picker" id="appointment-date-picker">
+            <my-datepicker class="dropdown-menu date-picker" ng-model="event.date"></my-datepicker>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="event-add-time" class="col-sm-3 control-label">Время</label>
+      <div class="col-sm-5">
+        <div class="input-group iconic">
+          <input type="text" name="time" class="form-control" id="event-add-time" ng-model="event.time" />
+          <a href="javascript:;" class="btn btn-default picker" dropdown-picker="appointment-available-time"><span class="glyphicon glyphicon-time"></span></a>
+          <div class="dropdown picker" id="appointment-available-time">
+            <ul class="dropdown-menu filter">
+              <li class="dropdown-header bg-gray">
+                <span class="glyphicon glyphicon-time white-text"></span>&nbsp;Свободное&nbsp;время
+              </li>
+              <li ng-repeat="time in analisysTime" ng-click="chooseTime(time.from, time.till)">
+                <a ng-class="{checked: time.from == event.timeFrom && time.till == event.timeTill}" href="javascript:;">
+                  {{time.from}}<span class="text-muted">&nbsp;…&nbsp;{{time.till}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="event-add-info" class="col-sm-3 control-label">Пациент</label>
+      <div class="col-sm-9">
+        <select class="form-control" name="info" id="event-add-info" ng-model="event.info" ng-disabled="0 == patientsList.length" ng-options="a.fullName for a in patientsList">
+        </select>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <input type="submit" class="btn btn-primary" ng-click="save(eventForm)" value="Сохранить" />
+    <button class="btn btn-warning" ng-click="cancel(eventForm)">Отменить</button>
+  </div>
+</form>

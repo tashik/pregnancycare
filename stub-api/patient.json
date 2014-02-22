@@ -1,0 +1,23 @@
+{
+    "avatar": "/images/empty-user-90.png",
+    "lastName": "Давыдова",
+    "firstName": "Ирина",
+    "middleName": "Дмитриевна",
+    "age": 24,
+    "sex": "female",
+    "termOfPregnancy": 32,
+    "lastVisit": "29 ноября 2013г.",
+    "tariff": "Комплексное",
+    "notifications": [{
+      "date": "Сегодня, 07:20",
+      "eventId": 100,
+      "eventDate": "25 ноября",
+      "title": "отчёт"
+    }, {
+      "overdue": true,
+      "overdueDays": 3,
+      "eventDate": "26 ноября",
+      "title": "отчёт"
+    }],
+    "notificationsCount": 2
+  }

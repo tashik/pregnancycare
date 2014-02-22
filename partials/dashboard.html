@@ -1,0 +1,130 @@
+<div class="row height-100 dashboard-background">
+
+    <div class="col-md-6 height-100 padding-top-30 padding-left-30">
+      <div class="panel height-45 margin-bottom-30 dashboard-panel-no-radius">
+        <div class="panel-heading patients-panel-header white-text">
+          <div class="row">
+            <div class="col-md-11">
+              {{patient_cur_date}}
+            </div>
+            <div class="col-md-1">
+              <span class="glyphicon glyphicon-chevron-right margin-right-10"></span>
+            </div>
+          </div>
+        </div>
+
+        <table class="table center-table">
+          <tr ng-repeat="patient in patients">
+            <td class="dashboard-border"></td>
+            <td><b>{{patient.time_start}}</b><br/>{{patient.time_end}}</td>
+            <td class="center-table-cell">
+              <img src="images/empty-patient.png"/>
+            </td>
+            <td class="center-table-cell dashboard-row-title black-text">{{patient.name}}</td>
+            <td class="dashboard-border"></td>
+          </tr>
+          <tr>
+            <td class="dashboard-border"></td>
+            <td colspan="3">
+              <button type="button" class="center-block btn btn-info white-text" ng-click="addEvent('appointment')">Добавить прием</button>
+            </td>
+            <td class="dashboard-border"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="panel height-45 dashboard-panel-no-radius">
+        <div class="panel-heading white-text dashboard-panel-header">
+          Запросы на прием ({{requests_count}})
+        </div>
+
+        <table class="table">
+          <tr ng-repeat="request in requests">
+            <td class="dashboard-border"></td>
+            <td class="patient-avatar">
+              <img src="images/empty-patient.png"/>
+            </td>
+            <td>
+              <div class="dashboard-row-title height-30">{{request.person}}</div>
+
+              <div class="row" ng-class="request.idx==0?'dashboard-background': '' ">
+                <div class="col-md-8 padding-top-5">
+                  <b>{{request.date}}</b><br/>
+                  {{request.time}}
+                </div>
+                <div class="col-md-4 padding-top-5 text-align-right">
+                  <a href="javascript: void(0);"><img src="images/tick.png"/></a>
+                  <a href="javascript: void(0);"><img src="images/remove.png"/></a>
+                  <a href="javascript: void(0);"><img src="images/refresh.png"/></a>
+                </div>
+
+              </div>
+
+              <a class="dashboard-small-text" href="javascript: void(0);">См. в календаре</a>
+
+            </td>
+            <td class="dashboard-border"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-md-6 height-100 padding-top-30 padding-right-30">
+      <div class="panel height-45 margin-bottom-30 dashboard-panel-no-radius">
+        <div class="panel-heading white-text dashboard-panel-header">
+          Отчеты ({{reports_count}})
+        </div>
+
+        <table class="table center-table">
+          <tr ng-repeat="report in reports" ng-class="report.overdue_period?'overdue-report':' ' ">
+            <td class="dashboard-border"></td>
+            <td>
+              <span class="dashboard-row-title black-text">Отчет за {{report.date}} г.</span><br/>
+              <div ng-if="report.overdue_period" class="red-text">
+                просрочен на {{report.overdue_period}}
+              </div>
+              {{report.person}}
+            </td>
+            <td class="center-table-cell text-align-right">
+              <div ng-if="report.is_not_viewed">
+                <span class="label label-danger white-text">Не просмотрен</span>
+              </div>
+              <div ng-if="report.overdue_period">
+                <button type="button" class="btn btn-info white-text">Напомнить</button>
+              </div>
+            </td>
+            <td class="dashboard-border"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="panel height-45 dashboard-panel-no-radius">
+        <div class="panel-heading white-text dashboard-panel-header">
+          Сообщения в чате ({{messages_count}})
+        </div>
+
+        <table class="table">
+          <tr ng-repeat="message in messages">
+            <td class="dashboard-border"></td>
+            <td>
+              <div class="row margin-bottom-10">
+                <div class="col-md-1">
+                  <div>
+                    <img src="images/empty-patient.png" ng-class="message.idx==0?'active-message':' ' "/>
+                  </div>
+                </div>
+                <div class="col-md-11">
+                  <span class="black-text">{{message.person}}</span><br/>
+                  <span class="dashboard-small-text">{{message.date_time}}</span>
+                </div>
+              </div>
+              <div class="margin-bottom-10">
+                {{message.text}}
+              </div>
+            </td>
+            <td class="dashboard-border"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,139 @@
+{
+  "performed": [{
+    "number": 22,
+    "events": [{
+      "name": "Отчёт за 20.11-27.11",
+      "type": "report",
+      "date": "29.11.2013",
+      "viewed": false,
+      "performed": true,
+      "alerts": {
+        "file": false
+      },
+      "files": 1,
+      "events": 3,
+      "comments": 5
+    }, {
+      "name": "Анализ мочи",
+      "type": "analysis",
+      "date": "27.11.2013",
+      "viewed": true,
+      "performed": false,
+      "alerts": {
+        "file": true
+      },
+      "files": 0,
+      "events": 1,
+      "comments": 1
+    }, {
+      "name": "Приём у врача",
+      "type": "appointment",
+      "date": "25.11.2013",
+      "viewed": true,
+      "performed": true,
+      "files": 0,
+      "events": 0,
+      "comments": 32
+    }]
+  }, {
+    "number": 21,
+    "events": [{
+      "name": "Отчёт за 13.11-20.11",
+      "type": "report",
+      "date": "22.11.2013",
+      "viewed": true,
+      "performed": true,
+      "files": 2,
+      "events": 1,
+      "comments": 1
+    }, {
+      "name": "Процедура такая-то",
+      "type": "procedure",
+      "date": "20.11.2013",
+      "viewed": true,
+      "performed": false,
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }, {
+      "name": "Приём у врача",
+      "type": "appointment",
+      "date": "19.11.2013",
+      "viewed": true,
+      "performed": true,
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }]
+  }, {
+    "number": 20,
+    "events": [{
+      "name": "Плановое узи",
+      "type": "analysis",
+      "date": "15.11.2013",
+      "viewed": true,
+      "performed": true,
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }, {
+      "name": "Комплексный массай для релаксации",
+      "type": "procedure",
+      "date": "12.11.2013",
+      "viewed": true,
+      "performed": true,
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }]
+  }, {
+    "number": 19,
+    "events": [{
+      "name": "Плановое узи",
+      "type": "analysis",
+      "date": "15.11.2013",
+      "viewed": true,
+      "performed": false,
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }, {
+      "name": "Комплексный массай для релаксации",
+      "type": "procedure",
+      "date": "12.11.2013",
+      "viewed": true,
+      "performed": false,
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }]
+  }],
+  "future": [{
+    "number": 23,
+    "events": [{
+      "name": "Плановое узи",
+      "type": "analysis",
+      "date": "01.12.2013",
+      "viewed": true,
+      "performed": false,
+      "alerts": {
+        "file": false
+      },
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }, {
+      "name": "Комплексный массаж для релаксации",
+      "type": "procedure",
+      "date": "30.11.2013",
+      "viewed": true,
+      "performed": false,
+      "alerts": {
+        "file": false
+      },
+      "files": 0,
+      "events": 0,
+      "comments": 0
+    }]
+  }]
+}

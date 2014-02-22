@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col col-md-4 sidebar">
+    <div patient-profile class="profile" patient="patient" ng-controller="PatientProfileCtr"></div>
+  </div>
+  <div class="col col-md-8 padding-30">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#/event-log">Журнал событий</a></li>
+      <li><a href="#/medical-record">Медицинская карта</a></li>
+    </ul>
+
+    <p class="space-before toolbar">
+      Запланировать:
+      <a href="javascript:" class="label bg-report" ng-click="addEvent('report')">Отчёт</a>
+      <a href="javascript:" class="label bg-appointment" ng-click="addEvent('appointment')">Приём</a>
+      <a href="javascript:" class="label bg-analysis" ng-click="addEvent('analisys')">Анализ</a>
+      <a href="javascript:" class="label bg-procedure" ng-click="addEvent('procedure')">Процедуру</a>
+    </p>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="dropdown pull-right">
+          <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
+            {{filterName}}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu filter">
+            <li><a href="javascript:" ng-class="{checked: 'all' == filter}" ng-click="resetFilter('all')">Все события</a></li>
+            <li><a href="javascript:" ng-class="{checked: filter.analysis}" ng-click="toggleFilter('analysis')">Анализы</a></li>
+            <li><a href="javascript:" ng-class="{checked: filter.procedure}" ng-click="toggleFilter('procedure')">Процедуры</a></li>
+            <li><a href="javascript:" ng-class="{checked: filter.report}" ng-click="toggleFilter('report')">Отчёты</a></li>
+            <li><a href="javascript:" ng-class="{checked: filter.appointment}" ng-click="toggleFilter('appointment')">Приёмы</a></li>
+            <li><a href="javascript:" ng-class="{checked: 'not-performed' == filter}" ng-click="resetFilter('not-performed')">Пропущенные</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row event-log" ng-show="futureWeeks.length > 0" >
+      <div class="col col-md-10 col-md-offset-2 toggle-future">
+        <div>
+          <a href="javascript:" ng-click="toggleFuture()" ng-hide="showFuture">Показать запланированные события</a>
+          <a href="javascript:" ng-click="toggleFuture()" ng-show="showFuture">Скрыть запланированные события</a>
+        </div>
+      </div>
+    </div>
+    <event-log weeks="futureWeeks" actions="1" ng-show="showFuture && futureWeeks.length > 0" class="future"></event-log>
+    <event-log weeks="pastWeeks" visible="1" ng-show="pastWeeks.length" class="performed"></event-log>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col col-md-3">
+    <div class="row padding-30">
+      <h3 class="margin-top-0">Календарь</h3>
+      <my-datepicker class="date-picker gray"
+        ng-model="calendarDate"
+        header-custom="true"
+        button-text="Добавить приём"
+        button-click="addAppointment()"
+      ></my-datepicker>
+
+      <h5 class="space-before"><strong>Показывать события:</strong></h5>
+      <p class="clickable" ng-click="toggleFilter('planed')"><i class="glyphicon glyphicon-checkbox bg-appointment-planed" ng-class="{'glyphicon-ok': filter.planed, 'glyphicon-unchecked': !filter.planed}"></i> Запланированные</p>
+      <p class="clickable" ng-click="toggleFilter('requests')"><i class="glyphicon glyphicon-checkbox bg-appointment-request" ng-class="{'glyphicon-ok': filter.requests, 'glyphicon-unchecked': !filter.requests}"></i> Запросы на приём</p>
+    </div>
+  </div>
+  <div class="col col-md-9">
+    <div class="row padding-30">
+      <div class="col col-md-3 col-md-offset-1">
+        <a class="btn btn-default bg-gray white-text" href="javascript:;">Сегодня</a>
+      </div>
+      <div class="col col-md-8">
+        <div class="pull-right">
+          <a class="btn btn-default bg-gray white-text" href="javascript:;"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <span>начало недели-конец недели</span>
+          <a class="btn btn-default bg-gray white-text" href="javascript:;"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <table class="week">
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>&nbsp;</th>
+          <th>ПН</th>
+          <th>ВТ</th>
+          <th>СР</th>
+          <th>ЧТ</th>
+          <th>ПТ</th>
+          <th>СБ</th>
+          <th>ВС</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="hour in hours">
+          <td class="time" ng-if="hour.whole">{{hour.value|zeropad}}:00</td>
+          <td class="time" ng-if="hour.half">&nbsp;</td>
+          <td class="calendar-cell" ng-repeat="day in weekDays">
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+[
+  {
+    "avatar": "images/empty-user-60.png",
+    "lastName": "Агафонова",
+    "firstName": "Ирина",
+    "middleName": "Олеговна",
+    "age": 24,
+    "children": ["male"],
+    "termOfPregnancy": 15,
+    "lastVisit": 1385668800000,
+    "tariff": "Комплексное",
+    "messages": 3,
+    "skips": 2
+  },
+  {
+    "avatar": "images/empty-user-60.png",
+    "lastName": "Бубенец",
+    "firstName": "Кира",
+    "middleName": "Юрьевна",
+    "age": 28,
+    "children": ["female"],
+    "termOfPregnancy": 32,
+    "lastVisit": 1384891200000,
+    "tariff": "VIP",
+    "messages": 1,
+    "skips": 0
+  },
+  {
+    "avatar": "images/empty-user-60.png",
+    "lastName": "Варламова",
+    "firstName": "Варвара",
+    "middleName": "Владимировна",
+    "age": 33,
+    "children": ["male", "male"],
+    "termOfPregnancy": 22,
+    "lastVisit": 1384804800000,
+    "tariff": "Ведение беременности",
+    "messages": 0,
+    "skips": 2
+  },
+  {
+    "avatar": "images/empty-user-60.png",
+    "lastName": "Давыдова",
+    "firstName": "Дина",
+    "middleName": "Олеговна",
+    "age": 21,
+    "children": ["female"],
+    "termOfPregnancy": 19,
+    "lastVisit": 1385150400000,
+    "tariff": "Комплексное",
+    "messages": 0,
+    "skips": 0
+  },
+  {
+    "avatar": "images/empty-user-60.png",
+    "lastName": "Жукова",
+    "firstName": "Анна",
+    "middleName": "Юрьевна",
+    "age": 42,
+    "children": ["male"],
+    "termOfPregnancy": 32,
+    "lastVisit": 1385582400000,
+    "tariff": "VIP",
+    "messages": 3,
+    "skips": 2
+  }
+]

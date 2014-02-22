@@ -1,0 +1,1068 @@
+/* app css stylesheet */
+body {
+  color: #979797;
+}
+
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.margright5 {
+  margin-right: 5px !important;
+}
+
+.margright0 {
+  margin-right: 0 !important;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.padding-30 {
+  padding: 30px;
+}
+
+.space-before {
+  margin-top: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.fg-report {
+  color: #c2e29f;
+}
+
+.bg-report {
+  color: #fff;
+  background: #c2e29f;
+}
+
+.fg-appointment {
+  color: #f69a9b;
+}
+
+.bg-appointment {
+  color: #fff;
+  background: #f69a9b;
+}
+
+.fg-analysis {
+  color: #ccc5ef;
+}
+
+.bg-analysis {
+  color: #fff;
+  background: #ccc5ef;
+}
+
+.fg-procedure {
+  color: #9ae2ca;
+}
+
+.bg-procedure {
+  color: #fff;
+  background: #9ae2ca;
+}
+
+.bg-gray {
+  color: #949494;
+  background: #e6e6e6;
+}
+
+.bg-green {
+  background: #9dd3bb;
+}
+
+.fg-appointment-planed {
+  color: #c3ead7;
+}
+
+.bg-appointment-planed {
+  background: #c3ead7;
+}
+
+.fg-appointment-request {
+  color:  #f9bfbe;
+}
+.bg-appointment-request {
+  background:  #f9bfbe;
+}
+
+/* Screen Header */
+.screen-header {
+  margin-bottom: 0;
+  border: 0 none;
+}
+
+.screen-header > .container {
+  /*height: 89px;*/
+  background: #636267;
+  padding: 0 20px;
+}
+
+.screen-header > .container > .main-menu {
+  margin-left: 225px;
+}
+
+.screen-header > .container > .main-menu > li {
+  padding-right: 40px;
+}
+
+.screen-header .navbar-nav.navbar-right:last-child {
+  margin-right: 10px;
+}
+
+.screen-header .nav > li > a {
+  color: #aaa9ae;
+  line-height: 60px;
+}
+
+.screen-header .nav > li > a:hover, .screen-header .nav > li > a:focus {
+  background: none transparent;
+}
+
+.screen-header .badge {
+  vertical-align: top;
+  background: #ea818f;
+  margin: 8px 0 0 0;
+}
+
+.screen-header .nav > li > a.profile,
+.screen-header .nav > li > a.profile:hover,
+.screen-header .nav > li > a.profile:focus,
+.screen-header .nav > li > a.profile:active {
+  background: #4e4d52;
+  color: #e9e9eb;
+  text-transform: none;
+}
+
+.screen-header .profile > div {
+  margin-right: 10px;
+}
+
+.screen-header .profile > div {
+  line-height: 1.2;
+}
+
+.screen-header .profile .name {
+  margin: 5px 20px 0 0;
+  vertical-align: middle;
+}
+
+/* End Screen Header */
+
+.screen-content {
+  display: table;
+  height: 100%;
+  margin-top: -100px;
+  padding: 100px 0 0 0;
+}
+
+.screen-content > .row {
+  display: table-row;
+  height: 100%;
+}
+
+.screen-content > .row > .col {
+  display: table-cell;
+  height: 100%;
+}
+
+.screen-content h4 {
+  margin-top: 0;
+}
+
+.screen-content .panel {
+  margin-bottom: 0;
+}
+
+.screen-content .panel-body p {
+  font-size: 12px;
+}
+
+.screen-content .panel-body h4 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.screen-content .list-group-panel .panel-body {
+  padding: 0;
+}
+
+.screen-content .list-group-panel .panel-body .list-group {
+  margin-bottom: 0;
+}
+
+#footer .well {
+  margin-bottom: 0;
+}
+
+.footer-btn {
+  margin-right: 28px;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.padding-top-30 {
+  padding-top: 30px;
+}
+
+.sidebar {
+  background: #f2f2f2;
+  padding: 0;
+}
+
+.sidebar > .profile {
+  padding: 30px 0 30px 30px;
+}
+
+.sidebar > .profile .border-top {
+  border-top: 1px solid #e3e3e3;
+}
+
+.sidebar > .profile .border-bottom {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.sidebar > .profile > .patient-info .padding-left {
+  padding-left: 24px;
+}
+
+.sidebar > .profile > .patient-info .padding-space {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+}
+
+.sidebar > .profile > .patient-info .padding-header {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.sidebar .patient-info {
+  margin: 30px 0;
+  padding-left: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar .patient-info img {
+  margin: 0 15px 15px 0;
+}
+
+.sidebar .patient-info .name {
+  margin-top: 10px;
+  font-size: 120%;
+  line-height: 1.2;
+  color: #636363;
+}
+
+.sidebar .patient-info .age {
+  margin-top: 10px;
+}
+
+.sidebar .patient-info .pregnancy-term {
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.sidebar .patient-info .sex {
+  border-radius: 50%;
+  background: #efb4b8;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.sidebar .patient-info .notifications {
+}
+
+.sidebar .patient-info .notification {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar .patient-info .notification .info {
+}
+
+.sidebar .patient-info .notification .info.pull-left {
+  width: 80%;
+}
+
+.sidebar .patient-info .notification .notify {
+  width: 19%;
+  text-align: center;
+}
+
+.sidebar .patient-info .notification .notify a {
+  font-size: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  /*padding: 6px 12px;*/
+}
+
+.sidebar .breadcrumbs a {
+  text-decoration: underline;
+}
+
+.sidebar .breadcrumbs a:hover {
+  text-decoration: none;
+}
+
+.sidebar .breadcrumbs a,
+.sidebar .breadcrumbs a:hover,
+.sidebar .breadcrumbs span {
+  color: #989898;
+  font-size: 90%;
+}
+
+.toolbar {
+  padding: 15px;
+  color: #a7a8aa;
+  background: #edf1f2;
+}
+
+.toolbar .label {
+  font-size: 80%;
+  margin-left: 5px;
+}
+
+.event-log .toggle-future, .log-entry > .week > .events {
+  border-left: 2px solid #efeff1;
+}
+
+.event-log > .toggle-future {
+  padding-bottom: 10px;
+}
+
+.event-log > .toggle-future > div {
+  margin-left: 15px;
+}
+
+.log-entry {
+}
+
+.log-entry > .week {
+  border-top: 1px dashed #e6e6e6;
+}
+
+.performed .log-entry > .week:first-child {
+  border-top: 2px solid #e5e5e5;
+}
+
+.log-entry > .week .number {
+  text-align: center;
+  padding-top: 20px;
+  line-height: 1;
+}
+
+.log-entry > .week > .events {
+  position: relative;
+  padding-top: 20px;
+}
+
+.log-entry > .week > .events > .event {
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 10px 20px 10px 10px;
+  box-shadow: none;
+  position: relative;
+}
+
+.log-entry > .week > .events > .event.active {
+  border-color: #dcdcdc;
+}
+
+.log-entry > .week > .events > .event > .mark {
+  display: block;
+  position: absolute;
+  left: -45px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%
+}
+
+.log-entry > .week > .events > .event > .mark.report {
+  background: #c2e29f;
+}
+
+.log-entry > .week > .events > .event > .mark.appointment {
+  background: #f69a9b;
+}
+.log-entry > .week > .events > .event > .mark.analysis {
+  background: #ccc5ef;
+}
+.log-entry > .week > .events > .event > .mark.procedure {
+  background: #9ae2ca;
+}
+
+.log-entry > .week > .events > .event > .mark.not-performed {
+  background-repeat: no-repeat;
+  background-image: url(/images/mark-mask.png);
+}
+
+.log-entry > .week > .events > .event > .arrow {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 16px;
+  top: 15px;
+  left: -8px;
+  background: transparent url(/images/arrow.png) no-repeat;
+}
+.log-entry > .week > .events > .event.active > .arrow {
+  background: transparent url(/images/arrow-active.png) no-repeat;
+}
+
+.future .log-entry > .week > .events > .event {
+  background: #fff;
+}
+
+.future .log-entry > .week > .events > .event > .actions {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  display: none;
+}
+
+.future .log-entry > .week > .events > .event:hover > .actions {
+  display: block;
+}
+
+.future .log-entry > .week > .events > .event > .actions > a {
+  display: block;
+  background: #cdced0;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.future .log-entry > .week > .events > .event > .actions > a.glyphicon-trash {
+  background: #f5aeac;
+}
+
+.future .log-entry > .week > .events > .event > .actions > a:hover {
+  text-decoration: none;
+}
+
+.future .log-entry > .week > .events > .event > .arrow,
+.future .log-entry > .week > .events > .event.active > .arrow {
+  background-image: url(/images/arrow-future.png);
+}
+
+.height-45 {
+  height: 45%
+}
+
+.height-100 {
+  height: 100%
+}
+
+.center-table > tbody > tr > .center-table-cell {
+  vertical-align: middle;
+}
+
+.row > div > .margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.overdue-report {
+  background-color: #FFFAE0;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.active-message {
+  border-radius: 50%;
+  border: solid lightgreen 2px;
+}
+
+.log-entry > .week > .events > .event > .row {
+  margin-left: 0;
+}
+
+.log-entry > .week > .events > .event > .row:last-child {
+  padding-bottom: 0;
+}
+
+.log-entry > .week > .events > .event > .row > .col {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.log-entry > .week > .events > .event > .row.attached {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  border-top: 1px solid #ddd;
+}
+
+.log-entry > .week > .events > .event .name {
+  font-size: 120%;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.table > tbody > tr > .dashboard-border{
+  width: 10px;
+  border-top-width: 0;
+}
+
+.red-text {
+  color: red;
+}
+
+.patients-panel-header {
+  background-color: #9DD3BB;
+  font-size: 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.dashboard-panel-header {
+  background-color: #A9A8BA;
+  font-size: 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.dashboard-row-title {
+  font-size: 17px;
+}
+
+.black-text {
+  color: #636365;
+}
+
+.dashboard-background {
+  background-color: #F2F2F2;
+}
+
+.dashboard-small-text {
+  font-size: 13px;
+}
+
+.dashboard-panel-no-radius {
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  -webkit-box-shadow: 0 0 0;
+}
+
+.padding-top-5 {
+  padding-top: 5px;
+}
+
+.patient-avatar {
+  width: 30px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.padding-left-30 {
+  padding-left: 30px;
+}
+
+.padding-right-30 {
+  padding-right: 30px;
+}
+
+.height-30 {
+  height: 30px;
+}
+
+.filter > li > a:before {
+  font-family: 'Glyphicons Halflings';
+  font-size: 12px;
+  line-height: 12px;
+  margin-right: 6px;
+  display: inline-block;
+  content: " ";
+  width: 12px;
+}
+
+.filter > li > a.checked:before {
+  display: inline-block;
+  content: "\e013";
+  color: #98d1dc;
+}
+
+.modal-dialog {
+  margin-top: 25%;
+}
+
+.modal-header > * {
+  color: #fff;
+  line-height: 1;
+}
+
+.modal-header {
+  background: #abd0d6;
+  border-radius: 6px 6px 0 0;
+  padding: 15px 5px 15px 20px;
+  border-bottom: 0 none;
+}
+
+.modal-header > h4,
+.modal-header > .close {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-header > .close {
+  opacity: 1;
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.modal-header > .close:hover,
+.modal-header > .close:focus {
+  color: #fff;
+}
+
+.modal-content .modal-body,
+.modal-content .modal-footer {
+  background: #ededed;
+}
+
+.modal-body label {
+  font-weight: normal;
+}
+
+.modal-footer {
+  border-top: 0 none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.modal-body .input-group.iconic .form-control {
+  border-radius: 4px;
+}
+
+.modal-body .input-group.iconic .form-control {
+  border-radius: 4px;
+  padding-right: 32px;
+}
+
+.modal-body .input-group.iconic .btn-default {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background: #fff;
+  border: 0 none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+a.picker, a.picker:hover, a.picker:active, a.picker:focus {
+  outline: 0;
+}
+
+.dropdown.picker {
+  z-index: 1060;
+}
+
+.dropdown.picker > .dropdown-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.dropdown.picker > .dropdown-menu > li.dropdown-header {
+  font-size: 16px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-top: 0 none;
+}
+
+.dropdown.picker > .dropdown-menu > .dropdown-header > .glyphicon {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.dropdown.picker > .dropdown-menu > li > a {
+  padding: 6px 10px;
+}
+
+.dropdown.picker > .dropdown-menu > li {
+  border-top: 1px solid #ebebeb;
+}
+
+.dropdown.picker > .dropdown-menu > li:last-child > a:hover {
+  border-radius: 4px;
+}
+
+.vertical-align-middle {
+  vertical-align: middle
+}
+
+.patients-row {
+  margin-top: 10px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 20px;
+  border-top-color: lightgray;
+  margin-right: 20px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.patients-buttons-row label {
+  width: 150px;
+}
+
+.patients-buttons-row  .btn-default:active, .patients-buttons-row .btn-default.active {
+  background-color: #93CCD7;
+  color: #ffffff;
+}
+
+.add-patient-dialog-title {
+  background-image: linear-gradient(to bottom, #93CCD7 0%, #93CCD7 100%);
+  color: #ffffff;
+}
+
+.patient-row {
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.patients-row .patient-row-margin {
+  margin: 0;
+}
+
+.padding-left-0 {
+  padding-left: 0;
+}
+
+.save-patient-button {
+  color: white;
+  background-image: linear-gradient(to bottom, #8BCFAA 0%, #8BCFAA 100%);
+}
+
+.close-add-patient-dialog {
+  color: white;
+  background-image: linear-gradient(to bottom, #9C9C9E 0%, #9C9C9E 100%);
+}
+
+.patients-buttons-row  .show-patient-dialog-button {
+  float: right;
+  width: 200px;
+}
+
+.show-patient-dialog-button {
+  color: white;
+  height: 40px;
+  background-image: linear-gradient(to bottom, #9C9C9E 0%, #9C9C9E 100%);
+}
+
+.patients-page-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.last-visit-title-column {
+  width: 40%;
+}
+
+.last-visit-value-column {
+  width: 60%;
+}
+
+.patients-title-column {
+  padding-right: 0;
+}
+
+.patients-value-column {
+  padding-left: 0;
+}
+
+.sidebar .patient-info .male {
+  border-radius: 50%;
+  background: #C0D3E1;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.sidebar .patient-info .female {
+  border-radius: 50%;
+  background: #efb4b8;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.patients-border {
+  margin-bottom: 30px;
+}
+
+.date-picker {
+  /*padding: 5px;*/
+}
+
+
+.date-picker thead th {
+  background: #e6e6e6;
+  font-weight: normal;
+}
+
+.date-picker thead.header-custom th {
+  background: #9dd3bb;
+  vertical-align: middle;
+}
+
+.date-picker thead.header-custom tr:first-child th {
+  padding-top: 24px;
+}
+
+.date-picker thead.header-custom tr:last-child th {
+  padding: 24px 0;
+}
+
+.date-picker tbody tr:last-child td {
+  padding-bottom: 12px;
+}
+
+.date-picker thead.header-custom th.arrow,
+.date-picker thead.header-custom th.arrow i,
+.date-picker thead.header-custom th.arrow a,
+.date-picker thead.header-custom th.arrow a:hover {
+  color: #79b198;
+  line-height: 24px;
+}
+
+.date-picker thead.header-custom th.month-name {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.date-picker thead.header-custom th .btn,
+.date-picker thead.header-custom th .btn:hover {
+  color: #fff;
+  background: #79b198;
+}
+
+
+.date-picker tbody td,
+.date-picker tbody th {
+  background: #f5f5f5;
+  font-weight: normal;
+  padding: 2px;
+}
+
+.date-picker tbody th {
+  color: #fecece;
+  padding: 24px 0 0 0;
+}
+
+.date-picker thead .btn-link,
+.date-picker thead .btn-link:hover,
+.date-picker thead .btn-link:active,
+.date-picker thead strong {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+.date-picker tbody .btn-link,
+.date-picker tbody .btn-link:hover,
+.date-picker tbody .btn-link:active {
+  text-decoration: none;
+  color: #595959;
+}
+
+.date-picker tbody .btn-sm {
+  padding: 5px 7px;
+}
+
+.date-picker tbody .btn-link .text-muted {
+  color: #bababa;
+}
+
+.date-picker tbody .btn-link.current {
+  border: 1px solid #fecece;
+  border-radius: 50%;
+}
+
+.gray.date-picker tbody .btn-link.has-event {
+  border: 1px solid #dadada;
+  border-radius: 50%;
+}
+
+.gray.date-picker tbody .btn-link.current {
+  border: 1px solid #dadada;
+  background: #dadada;
+  border-radius: 50%;
+}
+
+.date-picker tbody .marks {
+  text-decoration: none;
+  display: block;
+  line-height: 4px;
+  position: relative;
+  overflow: hidden;
+  top: -8px;
+}
+
+.date-picker tbody .marks:hover,
+.date-picker tbody .marks:active {
+  text-decoration: none;
+}
+
+.popover {
+  z-index: 2000;
+}
+
+.popover .activity {
+  margin-bottom: 10px;
+}
+
+.popover .activity:last-child {
+  margin-bottom: 0;
+}
+
+.popover .activity .icon {
+  width: 12px;
+  text-align: left;
+  /*font-size: 20px;*/
+  /*line-height: 24px;*/
+  font-weight: bold;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.popover .activity .title,
+.popover .activity .date-time {
+  display: block;
+  margin-left: 12px;
+}
+
+.popover .activity .title {
+  font-weight: bold;
+}
+
+.popover .activity .date-time {
+}
+
+.add-patient-dialog  .modal-dialog {
+  margin-top: 5%;
+}
+
+table.week {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.week td, table.week th {
+  padding: 4px;
+}
+
+table.week thead tr:first-child th {
+  border-top: 1px solid #dbdbdb;
+}
+
+table.week thead tr:last-child th {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+table.week thead tr th:first-child,
+table.week tbody tr td:first-child {
+  width: 100px;
+  text-align: right;
+  border-bottom: 0 none !important;
+  border-top: 0 none !important;
+  background: transparent;
+  border-right: 1px solid #dbdbdb;
+}
+
+table.week tbody tr:nth-child(odd) td {
+  border-bottom: 1px dashed #dbdbdb;
+}
+
+table.week tbody tr:nth-child(even) td {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+table.week th {
+  background: #ebebeb;
+  text-align: center;
+  font-weight: normal;
+}
+
+table.week .calendar-cell,
+table.week thead tr th:last-child {
+  border-right: 1px solid #dbdbdb;
+}
+
+.glyphicon-checkbox {
+  padding: 4px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.clickable {
+  cursor: pointer;
+}
